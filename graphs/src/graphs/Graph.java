@@ -33,7 +33,7 @@ public class Graph {
         }
     }
     
-    public void createEdge(int x0, int x1, int y0, int y1, int v0, int v1, int weight){
+    public void createEdge(int x0, int x1, int y0, int y1, int v0, int v1, double weight){
         Edges edge = new Edges(x0, x1, y0, y1, v0, v1, weight, Color.BLACK);
         edges.add(edge);
         nEdges++;
@@ -51,8 +51,16 @@ public class Graph {
         this.edges = new ArrayList<Edges>();
     }
 
-    public ArrayList<Nodes> getNodes() {
-        return nodes;
+    /*public ArrayList<Nodes> getNodes(int i) {
+        return nodes.get(i);
+    }*/
+    
+    public Nodes getNodes(int i){
+        return nodes.get(i);
+    }
+    
+    public Edges getEdges(int i){
+        return edges.get(i);
     }
 
     public void setNodes(ArrayList<Nodes> nodes) {
@@ -66,5 +74,20 @@ public class Graph {
     public void setEdges(ArrayList<Edges> edges) {
         this.edges = edges;
     }
-    
+
+    public int getnEdges() {
+        return nEdges;
+    }
+
+    public void setnEdges(int nEdges) {
+        this.nEdges = nEdges;
+    }
+
+    public int getnNodes() {
+        return nNodes;
+    }
+
+    public void setnNodes(int nNodes) {
+        this.nNodes = nNodes;
+    }
 }

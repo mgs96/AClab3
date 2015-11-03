@@ -20,7 +20,7 @@ public class Edges {
     private int y0;
     private int v0;
     private int v1;
-    private int weight;
+    private double weight;
     private Color color;
 
     public void draw(Graphics g){
@@ -38,7 +38,7 @@ public class Edges {
         g.drawString("[" + this.weight + "]", x - width, y);
     }
     
-    public Edges(int x0, int x1, int y0, int y1, int v0, int v1, int weight, Color color) {
+    public Edges(int x0, int x1, int y0, int y1, int v0, int v1, double weight, Color color) {
         this.x1 = x1;
         this.x0 = x0;
         this.y1 = y1;
@@ -97,7 +97,7 @@ public class Edges {
         this.v1 = v1;
     }
 
-    public int getWeight() {
+    public double getWeight() {
         return weight;
     }
 
@@ -112,7 +112,4 @@ public class Edges {
     public void setColor(Color color) {
         this.color = color;
     }
-    
-    
-    
 }
